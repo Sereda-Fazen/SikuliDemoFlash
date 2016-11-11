@@ -1,5 +1,6 @@
 package demo;
 
+import com.utils.DataProperties;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -17,7 +18,7 @@ import java.io.IOException;
 public class BeforeClass {
 
     private WebDriver driver;
-    String ChromePath = "C:\\Users\\Alex\\.jenkins\\jobs\\SikuliDemo\\FlashDemo\\src\\main\\resources\\chromedriver.exe";
+    String ChromePath = DataProperties.path("chromedriver.exe");
 
     @Before
     public void main () throws FindFailed {

@@ -1,5 +1,6 @@
 package demo;
 
+import com.utils.DataProperties;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,19 +19,28 @@ import java.io.IOException;
  */
 public class SikuliDemo extends BeforeClass {
 
+    private Pattern wrongBlock;
+    private Pattern start;
+    private Pattern openMenu;
+    private Pattern startGame;
+    private Pattern great;
+    private Pattern nextLevel;
+    private Pattern play;
+    private Pattern one;
+
 
     @Test
-    public void testDemo() throws FindFailed, InterruptedException {
+    public void testDemo() throws FindFailed {
 
         Screen screen = new Screen();
-        Pattern wrongBlock = new Pattern("C:\\Users\\Alex\\.jenkins\\jobs\\SikuliDemo\\FlashDemo\\img\\wrongBlock.jpg");
-        Pattern start = new Pattern("C:\\Users\\Alex\\.jenkins\\jobs\\SikuliDemo\\FlashDemo\\img\\start.jpg");
-        Pattern openMenu = new Pattern("C:\\Users\\Alex\\.jenkins\\jobs\\SikuliDemo\\FlashDemo\\img\\openMenu.jpg");
-        Pattern startGame = new Pattern("C:\\Users\\Alex\\.jenkins\\jobs\\SikuliDemo\\FlashDemo\\img\\startGame.jpg");
-        Pattern great = new Pattern("C:\\Users\\Alex\\.jenkins\\jobs\\SikuliDemo\\FlashDemo\\img\\greate.jpg");
-        Pattern nextLevel = new Pattern("C:\\Users\\Alex\\.jenkins\\jobs\\SikuliDemo\\FlashDemo\\img\\nextLevel.jpg");
-        Pattern play = new Pattern("C:\\Users\\Alex\\.jenkins\\jobs\\SikuliDemo\\FlashDemo\\img\\play.jpg");
-        Pattern one = new Pattern("C:\\Users\\Alex\\.jenkins\\jobs\\SikuliDemo\\FlashDemo\\img\\one.jpg");
+        wrongBlock = new Pattern(DataProperties.path("wrongBlock.jpg"));
+        start = new Pattern(DataProperties.path("start.jpg"));
+        openMenu = new Pattern(DataProperties.path("openMenu.jpg"));
+        startGame = new Pattern(DataProperties.path("startGame.jpg"));
+        great = new Pattern(DataProperties.path("greate.jpg"));
+        nextLevel = new Pattern(DataProperties.path("nextLevel.jpg"));
+        play = new Pattern(DataProperties.path("play.jpg"));
+        one = new Pattern(DataProperties.path("one.jpg"));
 
         screen.click(wrongBlock);
 
